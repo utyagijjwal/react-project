@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Link } from "react-router-dom"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-3xl font-extrabold text-white tracking-wide">
-          MyBrand
+          Ujjwal
         </div>
 
         {/* Hamburger Icon */}
@@ -36,60 +36,60 @@ const Navbar = () => {
 
         {/* Links for Desktop */}
         <div className="hidden lg:flex space-x-8">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
           >
             Home
-          </a>
-          <a
-            href="#aboutus"
+          </Link>
+          <Link
+            to="/about"
             className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
           >
             About Us
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            to="/service"
             className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
           >
             Services
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
 
         {/* Dropdown Links for Mobile */}
         {isOpen && (
           <div className="lg:hidden absolute top-16 left-0 w-full bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg z-10">
             <div className="flex flex-col space-y-4 py-6 px-8">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
               >
                 Home
-              </a>
-              <a
-                href="#aboutus"
+              </Link>
+              <Link
+                to="/about"
                 className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
               >
                 About Us
-              </a>
-              <a
-                href="#services"
+              </Link>
+              <Link
+                to="/service"
                 className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
               >
                 Services
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="text-white text-lg font-semibold hover:bg-white hover:text-blue-500 px-4 py-2 rounded-lg transition-all duration-300 ease-in-out shadow hover:shadow-lg"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
         )}

@@ -1,3 +1,4 @@
+import {Link } from "react-router-dom"
 import React from 'react';
 import MyImg from "../Assests/regis.svg"
 const HeroSection = () => {
@@ -12,9 +13,9 @@ const HeroSection = () => {
           <p className="text-lg lg:text-xl">
             I am a frontend developer and a B.Tech CSE student studying at Punjab Technical University.
           </p>
-          <button className="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 hover:shadow-lg transition duration-300 ease-in-out">
+          <Link to="/contact" className="bg-white text-blue-500 px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 hover:shadow-lg transition duration-300 ease-in-out">
             Connect with me
-          </button>
+          </Link>
         </div>
 
         {/* Right Section - Image */}
